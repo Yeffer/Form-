@@ -1,0 +1,241 @@
+/* * * MAIN CSS * * */
+@charset "UTF-8";
+
+/* * * * * * FONTS * * */
+
+/* * * * * MIXINS * * * * */
+@mixin backgroundDegree1($degree, $color1, $color2) {
+  
+  background: rgb(105,105,105); /* Old browsers */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzY4Njk2OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzhiOGM4YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient($degree,  $color1 50%, $color2 50%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%,$color1), color-stop(50%,$color2)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient($degree,  $color1 50%,$color2 50%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient($degree,  $color1 50%,$color2 50%); /* Opera 11.10+ */
+  background: -ms-linear-gradient($degree,  $color1 50%,$color2 50%); /* IE10+ */
+  background: linear-gradient(170deg,  $color1 50%,$color2 50%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#696969', endColorstr='#8c8c8c',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+}
+@mixin borderRadius($borderRadius-t, $borderRadius-r, $borderRadius-b, $borderRadius-l) {
+
+  -webkit-border-radius: $borderRadius-t $borderRadius-r $borderRadius-b $borderRadius-l;
+  -moz-border-radius: $borderRadius-t $borderRadius-r $borderRadius-b $borderRadius-l;
+  -ms-border-radius: $borderRadius-t $borderRadius-r $borderRadius-b $borderRadius-l;
+  border-radius: $borderRadius-t $borderRadius-r $borderRadius-b $borderRadius-l;
+
+}
+
+@mixin borderRadButton($borderRadButton) {
+
+  -webkit-border-radius: $borderRadButton;
+  -moz-border-radius: $borderRadButton;
+  -ms-border-radius: $borderRadButton;
+  border-radius: $borderRadButton;
+
+}
+
+/* * * * VARIABLES * * * * */
+$black: rgba(0,0,0,1); /* #000000 */
+$dark-grey: rgba(52,52,52,1); /* #696969 */
+$grey: rgba(105,105,105,1); /* #696969 */
+$light-grey: rgba(140,140,140,1); /* 8c8c8c */
+$lighter1-grey: rgba(180,180,180,1); /* 8c8c8c */
+$lighter2-grey: rgba(221,221,221,1); /* 8c8c8c */
+$white: rgba(255,255,255,1); /* 8c8c8c */
+
+
+
+
+
+
+/* @import "fonts.css"; */
+
+.clear {
+    clear:both;
+}
+.clear15 {
+    clear:both;
+    height:15px;
+} 
+.clear30 {
+    clear:both;
+    height:30px;
+}
+
+body {
+    background:#f2f2f2;
+}
+/* * * * * * * * */
+header {
+height: 80px;
+background: white;
+margin: 0 0 20px 0;
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+.titlleBox {
+	@include backgroundDegree1(-80deg, $grey, $light-grey);
+  
+  @include borderRadius(10px, 10px, 0px, 0px);
+
+	text-align: center;
+}
+.titlleBox h4 {
+color: white;
+font-size: 21px;
+font-family: "Myriad Pro",sans-serif;
+padding: 5px 0;
+}
+a.button_01 {
+	@include backgroundDegree1(-80deg, $black, $grey);
+
+  @include borderRadButton(2px);
+	
+	color:$white;
+	padding: 10px 20px;
+  display:block;
+  width: 230px;
+  margin-top:10px;
+  text-align:center;
+}
+a.button_01:hover {
+  @include backgroundDegree1(-80deg, $black -10%, $grey -10%);
+}
+
+a.button_02 {
+	@include backgroundDegree1(-80deg, $lighter1-grey, $lighter2-grey);
+
+  @include borderRadButton(2px);
+	
+	color:$dark-grey;
+	padding: 10px 20px;
+  display:block;
+  width: 230px;
+  margin-top:10px;
+  text-align:center;
+}
+a.button_02:hover {
+  @include backgroundDegree1(-80deg, $lighter1-grey -10%, $lighter2-grey -10%);
+  color:$white;
+
+}
+.contInitBox p {
+text-align: center;
+width: 60%;
+position: relative;
+left: 50%;
+margin: 10px 0 30px -30%;
+color:$grey;
+}
+/* * * * * */
+
+.step {
+width: 100px;
+float: left;
+margin: 10px 40px 30px 30px;
+text-align: center;
+}
+.stepWrap {
+width: 340px;
+height: 140px;
+position: relative;
+left: 50%;
+margin: 0 0 0 -170px;
+}
+.stepWrap:after {
+content: "";
+width: 160px;
+height: 15px;
+background: dimgray;
+position: absolute;
+margin: 33px 0 0 -260px;
+z-index: -1;
+}
+
+.stepNum {
+width: 60px;
+height: 60px;
+@include borderRadButton(50%);
+@include backgroundDegree1(-80deg, $lighter1-grey, $lighter2-grey);
+position: relative;
+left: 50%;
+margin: 0 0 10px -30px;
+border: 4px solid #f2f2f2;
+}
+.stepNum.active {
+  @include backgroundDegree1(-80deg, $grey, $lighter1-grey);
+}
+p.topTxt {
+width: 75%;
+text-align: center;
+position: relative;
+left: 50%;
+margin: 0 0 40px -37.5%;
+color:$grey;
+}
+
+.subTitleInput {
+width: 200px;
+height: 37px;
+padding: 5px 10px;
+text-align: celeft;
+@include backgroundDegree1(-80deg, $grey, $light-grey);
+color:$white;
+margin: 15px 0 20px 0;
+}
+.subTitleInput2{
+width: 450px;
+height: 37px;
+padding: 5px 10px;
+text-align: celeft;
+@include backgroundDegree1(-80deg, $grey, $light-grey);
+color:$white;
+margin: 15px 0 20px 0;
+}
+
+.itemData strong {
+text-align: right;
+display: block;
+}
+.itemData:nth-child(even) {
+display: block;
+background: $lighter2-grey;
+height: 35px;
+padding: 5px 0;
+margin: 5px 0;
+}
+.itemData:nth-child(odd) {
+display: block;
+background: Transparent;
+height: 35px;
+padding: 5px 0;
+margin: 5px 0;
+}
+/* * * * */
+.contInitBox h6 {
+text-align: center;
+font-weight: 900;
+font-size: 1.5rem;
+}
+.stepWrap2 {
+width: 510px;
+height: 140px;
+position: relative;
+left: 50%;
+margin: 0 0 0 -255px;
+}
+.stepWrap2:after {
+content: "";
+width: 330px;
+height: 15px;
+background: dimgray;
+position: absolute;
+margin: 33px 0 0 -430px;
+z-index: -1;
+}
+
+
+
+
