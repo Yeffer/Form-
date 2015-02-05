@@ -29,7 +29,7 @@ $host = "localhost";
 
 $optionsDataObject = &PEAR::getStaticProperty('DB_DataObject','options');
 $optionsDataObject = array(
-'debug'			   => 3, // Permite detallar las consultas que ejecuta, tiene hasta 3 niveles de detalle
+'debug'			   => 0, // Permite detallar las consultas que ejecuta, tiene hasta 3 niveles de detalle
 'database'         => "mysql://$username_link:$password_link@$serverdb_link/$database_link", // Configura la base de datos
 'schema_location'  => 'C:\AppServ\www\CentroDemocratico\db',
 'class_location'   => 'C:\AppServ\www\CentroDemocratico\db',

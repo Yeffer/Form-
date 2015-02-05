@@ -1,7 +1,13 @@
 <?php
 	require("db/requires.ini.php");
 	$varCtrl=$_REQUEST['varCtrl'];
+	print_r($_POST['varCtrl']);
+	if(isset($_POST['reconfirmar']) && ($_POST['reconfirmar']=="yes")){
+		echo "esto es el if";
+		print_r($_POST);
+	}else{
 	switch ($varCtrl) {
+
 		case '1':
 			# captura datos por post
 			$datos['nombre']=$_POST['nombre'];		
@@ -22,14 +28,38 @@
 			$datos['lugarVotacion']=$_POST['lugarVotacion'];
 			$datos['tema_radios']=$_POST['tema_radios'];
 			$datos['referido']=$_POST['referido'];
+			
 			$smarty->assign("datos",$datos);
 			$smarty->display("confirmReg.html");
 			
+
 		break;
-		case '2':
-			var_dump($_POST);
+		case '2':	
+			# Inserta usuario
+			$usuarioClass= new CdUsuario();
+
+			foreach ($_POST as $key => $value) {
+				# code...
+				
+				$usuarioClass->$key=$_POST[$key];
+			}
+			
+			$insertaUsuario=$usuarioClass->crearUsuario();
+		
+			/*if($insertaUsuario){
+				$msn="Registro de marca Guardado exitosamente";
+			}else{
+				$msn="No se guardo marca";
+			}
+			$smarty->assign("msn",$msn);
+			$smarty->display("confirmReg.html");					
+*/
+
+			
 		break;
 		default:
-			//var_dump("hola");
+	
+			
 		break;
 	}
+}

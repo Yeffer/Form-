@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.6, created on 2015-02-04 06:01:10
+<?php /* Smarty version 2.6.6, created on 2015-02-05 06:24:35
          compiled from confirmReg.html */ ?>
 <!DOCTYPE html>
 <html class="no-js">
@@ -57,7 +57,6 @@
 				<div class="clear30"></div>
 				<!-- /* * * * DATOS * * * */ -->
 				<div class="dataWrap">
-				<form action="confirmReg.php?varCtrl=2" method="POST"> 
 						<div class="row">
 							<div class="small-12 medium-8 large-8 medium-offset-2 large-offset-2 columns">
 								<div class="itemData">
@@ -77,21 +76,21 @@
 									<div class="small-12 medium-6 large-6 columns">
 										<strong>Cédula de Ciudadania:</strong>
 									</div>
-									<div class="small-12 medium-6 large-6 columns"><?php echo $this->_tpl_vars['datos']['cedula']; ?>
+									<div class="small-12 medium-6 large-6 columns" id="datos_cedula"><?php echo $this->_tpl_vars['datos']['cedula']; ?>
 </div>
 								</div>
 								<div class="itemData">
 									<div class="small-12 medium-6 large-6 columns">
 										<strong>Género:</strong>
 									</div>
-									<div class="small-12 medium-6 large-6 columns"><?php echo $this->_tpl_vars['datos']['genero']; ?>
+									<div class="small-12 medium-6 large-6 columns" id="datos_genero"><?php echo $this->_tpl_vars['datos']['genero']; ?>
 </div>
 								</div>
 								<div class="itemData">
 									<div class="small-12 medium-6 large-6 columns">
 										<strong>Fecha de nacimiento:</strong>
 									</div>
-									<div class="small-12 medium-6 large-6 columns"><?php echo $this->_tpl_vars['datos']['dia']; ?>
+									<div class="small-12 medium-6 large-6 columns" id="datos_fecha"><?php echo $this->_tpl_vars['datos']['dia']; ?>
  - <?php echo $this->_tpl_vars['datos']['mes']; ?>
  - <?php echo $this->_tpl_vars['datos']['ano']; ?>
  </div>
@@ -100,72 +99,72 @@
 									<div class="small-12 medium-6 large-6 columns">
 										<strong>Correo electrónico:</strong>
 									</div>
-									<div class="small-12 medium-6 large-6 columns"><?php echo $this->_tpl_vars['datos']['mail']; ?>
+									<div class="small-12 medium-6 large-6 columns" id="datos_mail"><?php echo $this->_tpl_vars['datos']['mail']; ?>
 </div>
 								</div>
 								<div class="itemData">
 									<div class="small-12 medium-6 large-6 columns">
 										<strong>Celular:</strong>
 									</div>
-									<div class="small-12 medium-6 large-6 columns"><?php echo $this->_tpl_vars['datos']['celular']; ?>
+									<div class="small-12 medium-6 large-6 columns" id="datos_celular"><?php echo $this->_tpl_vars['datos']['celular']; ?>
 </div>
 								</div>
 								<div class="itemData">
 									<div class="small-12 medium-6 large-6 columns">
 										<strong>Teléfono:</strong>
 									</div>
-									<div class="small-12 medium-6 large-6 columns"><?php echo $this->_tpl_vars['datos']['telefono']; ?>
+									<div class="small-12 medium-6 large-6 columns" id="datos_telefono"><?php echo $this->_tpl_vars['datos']['telefono']; ?>
 </div>
 								</div>
 								<div class="itemData">
 									<div class="small-12 medium-6 large-6 columns">
 										<strong>País:</strong>
 									</div>
-									<div class="small-12 medium-6 large-6 columns"><?php echo $this->_tpl_vars['datos']['selectPais']; ?>
+									<div class="small-12 medium-6 large-6 columns" id="datos_pais"><?php echo $this->_tpl_vars['datos']['selectPais']; ?>
 </div>
 								</div>
 								<div class="itemData">
 									<div class="small-12 medium-6 large-6 columns">
 										<strong>Departamento:</strong>
 									</div>
-									<div class="small-12 medium-6 large-6 columns"><?php echo $this->_tpl_vars['datos']['selectDepartamento']; ?>
+									<div class="small-12 medium-6 large-6 columns" id="datos_departamento"><?php echo $this->_tpl_vars['datos']['selectDepartamento']; ?>
 </div>
 								</div>
 								<div class="itemData">
 									<div class="small-12 medium-6 large-6 columns">
 										<strong>Municipio:</strong>
 									</div>
-									<div class="small-12 medium-6 large-6 columns"><?php echo $this->_tpl_vars['datos']['selectMunicipio']; ?>
+									<div class="small-12 medium-6 large-6 columns" id="datos_municipio"><?php echo $this->_tpl_vars['datos']['selectMunicipio']; ?>
 </div>
 								</div>
 								<div class="itemData">
 									<div class="small-12 medium-6 large-6 columns">
 										<strong>Dirección:</strong>
 									</div>
-									<div class="small-12 medium-6 large-6 columns"><?php echo $this->_tpl_vars['datos']['direccion']; ?>
+									<div class="small-12 medium-6 large-6 columns" id="datos_direccion"><?php echo $this->_tpl_vars['datos']['direccion']; ?>
 </div>
 								</div>
 								<div class="itemData">
 									<div class="small-12 medium-6 large-6 columns">
 										<strong>Oficio:</strong>
 									</div>
-									<div class="small-12 medium-6 large-6 columns"><?php echo $this->_tpl_vars['datos']['selectOcupacion']; ?>
+									<div class="small-12 medium-6 large-6 columns" id="datos_ocupacion"><?php echo $this->_tpl_vars['datos']['selectOcupacion']; ?>
 </div>
 								</div>
 								<div class="itemData">
 									<div class="small-12 medium-6 large-6 columns">
 										<strong>Lugar de Votación:</strong>
 									</div>
-									<div class="small-12 medium-6 large-6 columns"><?php echo $this->_tpl_vars['datos']['lugarVotacion']; ?>
+									<div class="small-12 medium-6 large-6 columns" id="datos_votacion"><?php echo $this->_tpl_vars['datos']['lugarVotacion']; ?>
 </div>
 								</div>
 								<div class="itemData">
 									<div class="small-12 medium-6 large-6 columns">
 										<strong>¿Cuál es el tema de más te preocupa en tu municipio?</strong>
 									</div>
-									<input type="hidden" name="varCtrl" value="<?php echo $this->_tpl_vars['datos']['tema_radios']; ?>
+									<input type="hidden" name="" value="<?php echo $this->_tpl_vars['datos']['tema_radios']; ?>
 ">
-									<div class="small-12 medium-6 large-6 columns"><?php echo $this->_tpl_vars['datos']['tema_radios']; ?>
+									<div class="small-12 medium-6 large-6 columns" id="datos_temas"><?php echo $this->_tpl_vars['datos']['tema_radios']; ?>
 </div>
 									
 								</div>
@@ -181,15 +180,11 @@
 						<div class="small-12 medium-4 large-4 columns" align="center">
 							<a href="registroForm.php" class="button_01">Volver</a>
 						</div>
-						<div class="small-12 medium-4 large-4 columns" align="center">
-							
-							<input type="hidden" name="varCtrl" value="2">
-                			<input type="submit" class="button_02" name="Registrar">   
-                			<a href="#" class="button_02" id="guardar_ajax">Registrar</a>
+						<div class="small-12 medium-4 large-4 columns" align="center">							
+                			<a href="#" class="button_01" id="guardar_ajax">Registrar</a>
 						</div>
 						<div class="small-12 medium-2 large-2 columns" align="center">&nbsp;</div>
 					</div>
-				</form>
 			</div>
 		</div>
 	</div>

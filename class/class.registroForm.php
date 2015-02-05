@@ -5,32 +5,36 @@ class CdUsuario{
 	/*Funcion consulta de lo usuarios */
 	function consultaUsuario(){
 
-		$cdUsuario = DB_DataObject::Factory('CdUsuario');
-		$campos=$cdUsuario->table();
-		$cdUsuario->find();
+		$cd_usuario = DB_DataObject::Factory('cdUsuario');
+		$campos=$cd_usuario->table();
+		$cd_usuario->find();
 
 		$cont=0;	
-		while ($cdUsuario->fetch()) {
+		while ($cd_usuario->fetch()) {
 			foreach ($campos as $key => $value) {
 			# Igualo los valores de la tabla a un objeto
-				$ret[$cont]->$key=$cdUsuario->key;
+				$ret[$cont]->$key=$cd_usuario->key;
 			}
 			$cont++;
 		}
 		return $ret;
 	}	
 	function crearUsuario(){
-		$cdUsuario = DB_DataObject::Factory('CdUsuario');
-		$campos=$cdUsuario->table();
-
+		
+		$cd_usuario = DB_DataObject::Factory('cdUsuario');
+		$campos=$cd_usuario->table();		
+		
 		foreach ($campos as $key => $value) {
-			# code...
-			$cdUsuario->$key=$this->key;
+# code...
+			$cd_usuario->$key = $this->$key;
 		}
-		$cdUsuario->find();
-		if(!$cdUsuario->fetch()){
-			$cdUsuario->fecha=date("y-m-d H:i:s");
-			$cdUsuario->insert();
+
+		$cd_usuario->find();
+		
+		if(!$cd_usuario->fetch()){
+
+			$cd_usuario->fecha=date("y-m-d H:i:s");
+			$cd_usuario->insert();
 			$ret=1;
 		}else {
 			$ret=0;

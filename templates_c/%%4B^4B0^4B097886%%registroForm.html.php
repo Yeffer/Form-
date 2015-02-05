@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.6, created on 2015-02-04 05:39:22
+<?php /* Smarty version 2.6.6, created on 2015-02-04 14:49:12
          compiled from registroForm.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'html_select_date', 'registroForm.html', 110, false),array('function', 'html_options', 'registroForm.html', 145, false),array('function', 'html_radios', 'registroForm.html', 229, false),)), $this); ?>
@@ -277,7 +277,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'html_select
 									<div class="small-12 medium-12 large-12 columns">
 										<div class="row">
 											<div class="small-12 medium-6 large-6 columns">
-												<p>Al hacer clicj en "Siguiente" aceptas las <a href="#">Condiciones de uso</a>, su <a href="#">Política de privacidad</a>.</p>
+												<p>Al hacer click en "Siguiente" aceptas las <a href="#">Condiciones de uso</a>, su <a href="#">Política de privacidad</a>.</p>
 											</div>
 											<div class="small-12 medium-6 large-6 columns">
 												<img src="images/captcha.png" height="123" width="331" alt="">
